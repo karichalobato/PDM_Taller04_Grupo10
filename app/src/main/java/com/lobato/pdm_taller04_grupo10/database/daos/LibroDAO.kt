@@ -17,5 +17,5 @@ interface LibroDAO {
     fun getAllBooks():LiveData<List<Libro>>
 
     @Query("DELETE FROM Book")
-    fun deleteBook()
+    fun deleteBooks()
 }
