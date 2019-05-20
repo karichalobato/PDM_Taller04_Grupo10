@@ -1,6 +1,5 @@
 package com.lobato.pdm_taller04_grupo10.database.entities
 
-import android.media.Image
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -9,7 +8,7 @@ import androidx.room.PrimaryKey
 data class Libro (
 
     @ColumnInfo(name = "CoverPage")
-    val cover_page: Image,
+    val cover_page: String,
     @ColumnInfo(name = "Title")
     val title: String,
     @ColumnInfo(name = "Author")
