@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "Book")
 data class Libro (
+
     @ColumnInfo(name = "CoverPage")
     val cover_page: Image,
     @ColumnInfo(name = "Title")
@@ -19,5 +20,7 @@ data class Libro (
     val description: String
 ){
     @PrimaryKey(autoGenerate = true)
-    var id: Long = 0
+    var idBook: Long = 0
 }
+
+

@@ -6,7 +6,8 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "Editorial")
 data class Editorial (
-    @ColumnInfo(name = "Nombre")
+
+    @ColumnInfo(name = "Name")
     val name: String,
     @ColumnInfo(name = "Address")
     val addres: String,
@@ -18,5 +19,5 @@ data class Editorial (
     val email: String
 ){
     @PrimaryKey(autoGenerate = true)
-    var id: Long = 0
+    var idEditorial: Long = 0
 }
