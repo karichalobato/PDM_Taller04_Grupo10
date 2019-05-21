@@ -2,6 +2,7 @@ package com.lobato.pdm_taller04_grupo10.database.entities
 
 import android.media.Image
 import androidx.room.*
+import java.net.URL
 
 @Entity(indices = [Index("title"), Index("author")],
     tableName = "Book",
@@ -10,7 +11,7 @@ import androidx.room.*
  class Libro (
 
     @ColumnInfo(name = "CoverPage")
-    val cover_page: Image,
+    val cover_page: String,
     @ColumnInfo(name = "Title")
     val title: String,
     @ColumnInfo(name = "Edition")
@@ -18,7 +19,7 @@ import androidx.room.*
     @ColumnInfo(name = "Description")
     val description: String,
     @ColumnInfo(name = "Editorial")
-    val editorial: Int?,
+    val editorial: Long,
     @ColumnInfo(name = "Favorito")
     val favorito: Boolean
 )
