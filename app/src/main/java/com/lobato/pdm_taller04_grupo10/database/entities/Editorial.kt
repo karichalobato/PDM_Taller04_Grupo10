@@ -5,16 +5,12 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Editorial")
-data class Editorial (
+class Editorial (
 
     @ColumnInfo(name = "Name")
     val name: String,
     @ColumnInfo(name = "Address")
     val addres: String,
-    @ColumnInfo(name = "PostalCode")
-    val postal_code: Int,
-    @ColumnInfo(name = "Phone")
-    val phone: Number,
     @ColumnInfo(name = "Email")
     val email: String
 ){

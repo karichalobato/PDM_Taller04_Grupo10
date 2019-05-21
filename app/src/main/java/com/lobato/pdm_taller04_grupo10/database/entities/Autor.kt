@@ -5,14 +5,13 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Author")
-data class Autor(
+class Autor(
 
     @ColumnInfo(name = "Name")
     val name: String,
-    @ColumnInfo(name = "Nationality")
-    val nationality: String
-)
-{
+    @ColumnInfo(name = "País de origen")
+    val paisOrigen: String
+){
     @PrimaryKey(autoGenerate = true)
-    var idAuthor: Long = 0
+    val idAuthor: Long = 0
 }

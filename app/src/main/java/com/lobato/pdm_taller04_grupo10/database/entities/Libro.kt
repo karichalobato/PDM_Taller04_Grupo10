@@ -1,25 +1,31 @@
 package com.lobato.pdm_taller04_grupo10.database.entities
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import android.media.Image
+import androidx.room.*
 
-@Entity(tableName = "Book")
-data class Libro (
+@Entity(indices = [Index("title"), Index("author")],
+    tableName = "Book",
+    foreignKeys = [ForeignKey(entity = Editorial::class,
+        parentColumns = ["idEditorial"], childColumns = ["Editorial"])])
+ class Libro (
 
     @ColumnInfo(name = "CoverPage")
-    val cover_page: String,
+    val cover_page: Image,
     @ColumnInfo(name = "Title")
     val title: String,
-    @ColumnInfo(name = "Author")
-    val author: String,
     @ColumnInfo(name = "Edition")
-    val edition: String,
+    val edition: Int,
     @ColumnInfo(name = "Description")
-    val description: String
-){
+    val description: String,
+    @ColumnInfo(name = "Editorial")
+    val editorial: Int?,
+    @ColumnInfo(name = "Favorito")
+    val favorito: Boolean
+)
+{
     @PrimaryKey(autoGenerate = true)
-    var idBook: Long = 0
+    val idBook: Long = 0
 }
+
 
 
