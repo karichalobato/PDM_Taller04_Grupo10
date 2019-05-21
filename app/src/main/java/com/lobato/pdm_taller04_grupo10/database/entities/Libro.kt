@@ -21,7 +21,9 @@ import java.net.URL
     @ColumnInfo(name = "Editorial")
     val editorial: Long,
     @ColumnInfo(name = "Favorito")
-    val favorito: Boolean
+    val favorito: Boolean,
+    @ColumnInfo(name = "ISBN")
+    val isbn: String
 )
 {
     @PrimaryKey(autoGenerate = true)
