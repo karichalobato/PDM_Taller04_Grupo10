@@ -24,9 +24,8 @@ class BookViewModel(app:Application):AndroidViewModel(app){
     private var editorialRepository:GitHubEditorialRepository?=null
     private var libroRepository:GitHubLibroRepository?=null
     private var tagRepository:GitHubTagsRepository?=null
-    //TODO: Variable de tipo LiveData para almacenar el cache de la lista de libros
-    var allBooks:LiveData<List<Libro>>?=null
-
+    /*//TODO: Variable de tipo LiveData para almacenar el cache de la lista de libros
+    var allBooks:LiveData<List<Libro>>?=null*/
     //TODO: Obteniendo referencia al dao de BookRoomDatabase
     init {
         loadAutor()
@@ -62,6 +61,7 @@ class BookViewModel(app:Application):AndroidViewModel(app){
     private fun loadAutor(){
         val daoAutor = BookRoomDataBase.getInstance(getApplication()).authorDAO()
         autorRepository= GitHubAutorRepository(daoAutor)
+
     }
     private fun loadEditorial(){
         val daoEditorial=BookRoomDataBase.getInstance(getApplication()).editorialDAO()
