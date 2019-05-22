@@ -57,6 +57,8 @@ public abstract class BookRoomDataBase : RoomDatabase(){
             }
         }
 
+        //TODO POBLANDO LA BASE DE DATOS CON DATOS QUEMADOS!!!
+
         suspend fun populateDatabase(libroDAO: LibroDAO,autorDAO: AutorDAO,editorialDAO: EditorialDAO,tagsDAO: TagsDAO) {
 
             editorialDAO.deleteEditorial()
@@ -64,6 +66,7 @@ public abstract class BookRoomDataBase : RoomDatabase(){
             libroDAO.deleteBooks()
             tagsDAO.deleteTags()
 
+            //TODO+++++++++++++++++++++++++++++++++++++++++++++TODO POBLANDO TABLA TAGS+++++++++++++++++++++++++++++++++++++++++++++
             var tags = Tags("Ciencia")
             tagsDAO.insertTgas(tags)
 
@@ -127,6 +130,9 @@ public abstract class BookRoomDataBase : RoomDatabase(){
             tags = Tags("Minutos")
             tagsDAO.insertTgas(tags)
 
+            //TODO+++++++++++++++++++++++++++++++++++++++++++++TODO POBLANDO TABLA AUTHOR+++++++++++++++++++++++++++++++++++++++++++++
+
+
             var autor = Autor("Gabriel Garcia Marquéz","Colombia")
             autorDAO.insertAuthor(autor)
 
@@ -157,6 +163,8 @@ public abstract class BookRoomDataBase : RoomDatabase(){
             autor = Autor("J. K. Rowling","Yate, Reino Unido")
             autorDAO.insertAuthor(autor)
 
+            //TODO+++++++++++++++++++++++++++++++++++++++++++++TODO POBLANDO TABLA EDITORIAL+++++++++++++++++++++++++++++++++++++++++++++
+
 
             var editorial = Editorial("Pearson PLC","UK","pearson@plc.com")
             editorialDAO.insertEditorial(editorial)
@@ -174,6 +182,7 @@ public abstract class BookRoomDataBase : RoomDatabase(){
             editorialDAO.insertEditorial(editorial)
 
 
+            //TODO+++++++++++++++++++++++++++++++++++++++++++++TODO POBLANDO TABLA BOOK+++++++++++++++++++++++++++++++++++++++++++++
 
             var libro = Libro("https://cdn.shopify.com/s/files/1/1882/8385/products/9780525562443_800x.jpg?v=1522387277",
                 "Cien años de soledad",5,

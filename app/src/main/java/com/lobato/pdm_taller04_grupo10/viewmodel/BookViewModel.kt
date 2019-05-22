@@ -1,7 +1,6 @@
-package com.lobato.pdm_taller04_grupo10.database.viewmodel
+package com.lobato.pdm_taller04_grupo10.viewmodel
 
 import android.app.Application
-import android.nfc.Tag
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope

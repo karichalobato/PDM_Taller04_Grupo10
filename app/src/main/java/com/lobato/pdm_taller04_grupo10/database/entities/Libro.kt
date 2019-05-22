@@ -1,8 +1,8 @@
 package com.lobato.pdm_taller04_grupo10.database.entities
 
-import android.media.Image
+
 import androidx.room.*
-import java.net.URL
+
 
 @Entity(indices = [Index("title"), Index("author")],
     tableName = "Book",
