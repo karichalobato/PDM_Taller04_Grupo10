@@ -7,8 +7,8 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "Tags")
 class Tags (
 
-    @ColumnInfo(name = "TagsName")
-    val tagsName: String
+    @ColumnInfo(name = "Name")
+    val name: String
 )
 {
     @PrimaryKey(autoGenerate = true)

@@ -10,7 +10,7 @@ import com.lobato.pdm_taller04_grupo10.database.entities.Libro
 
 @Dao
 interface AutorDAO {
-    @Query("SELECT * FROM Author WHERE name == name")
+    @Query("SELECT * FROM Author WHERE name==:name")
     fun getAuthorByName(name: String):LiveData<List<Autor>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)//HACIENDO UN INSERT Y UN UPDATE EN LA MISMA LINEA

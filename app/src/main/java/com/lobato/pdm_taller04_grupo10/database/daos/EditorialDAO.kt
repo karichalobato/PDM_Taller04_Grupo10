@@ -9,7 +9,7 @@ import com.lobato.pdm_taller04_grupo10.database.entities.Libro
 
 interface EditorialDAO {
 
-    @Query("SELECT * FROM Editorial WHERE name == :name")
+    @Query("SELECT * FROM Editorial WHERE name==:name")
     fun getEditorialByname(name: String): LiveData<List<Editorial>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
