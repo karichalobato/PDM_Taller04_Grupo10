@@ -5,7 +5,7 @@ import androidx.room.Query
 import com.lobato.pdm_taller04_grupo10.database.entities.Autor
 import com.lobato.pdm_taller04_grupo10.database.entities.Libro
 
-interface AutorXLibroDAO {
+interface AutorJoinLibroDAO {
 
     @Query("SELECT * FROM Author INNER JOIN AutorXLibro ON Author.idAuthor = AutorXLibro.authorID WHERE AutorXLibro.bookID=:authorID")
     fun getAuthorOfBooks(authorID: Int): LiveData<List<Autor>>

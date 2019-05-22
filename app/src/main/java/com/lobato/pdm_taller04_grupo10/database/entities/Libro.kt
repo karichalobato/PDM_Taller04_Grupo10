@@ -8,7 +8,7 @@ import androidx.room.*
     tableName = "Book",
     foreignKeys = [ForeignKey(entity = Editorial::class,
         parentColumns = ["idEditorial"], childColumns = ["Editorial"])])
- class Libro (
+ data class Libro (
 
     @ColumnInfo(name = "CoverPage")
     val cover_page: String,

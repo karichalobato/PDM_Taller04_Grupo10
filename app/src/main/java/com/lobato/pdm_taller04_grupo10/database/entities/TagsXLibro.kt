@@ -9,4 +9,4 @@ import androidx.room.ForeignKey
         parentColumns = ["idTags"],childColumns = ["id_tags"]),
     ForeignKey(entity = Libro::class,parentColumns = ["idBook"],childColumns = ["id_book"])])
 
-class TagsXLibro (var tagsID:Int,var bookID:Int)
+data class TagsXLibro (var tagsID:Int,var bookID:Int)
