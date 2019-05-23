@@ -12,5 +12,5 @@ class GitHubAutorRepository (private val autorDao: AutorDAO){
         autorDao.insertAuthor(repo)
     }
 
-    fun getAll(): LiveData<List<Autor>> = autorDao.getAuthor()
+    fun getAll(): LiveData<List<Autor>> = autorDao.getAuthors()
 }

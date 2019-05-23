@@ -16,6 +16,9 @@ interface TagsDAO {
     @Query("SELECT * FROM Tags WHERE name=:name")
     fun getTagsByName(name: String): LiveData<List<Tags>>
 
+    @Query("SELECT * FROM Tags")
+    fun getAllsTags():LiveData<List<Tags>>
+
 
     @Query("DELETE FROM Tags")
     fun deleteTags()

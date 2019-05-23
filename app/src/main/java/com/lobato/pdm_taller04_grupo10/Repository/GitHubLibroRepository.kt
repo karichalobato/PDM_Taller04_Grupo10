@@ -14,7 +14,7 @@ class GitHubLibroRepository(private val bookDao: LibroDAO){
 
     fun getAll(): LiveData<List<Libro>> = bookDao.getAllBooks()
 
-    fun delete()= bookDao.deleteBook()
+    fun delete()= bookDao.deleteBooks()
 
 
 }

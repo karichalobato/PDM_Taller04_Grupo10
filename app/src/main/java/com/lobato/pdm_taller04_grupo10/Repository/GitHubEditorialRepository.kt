@@ -12,5 +12,5 @@ class GitHubEditorialRepository (private val editDao: EditorialDAO){
         editDao.insertEditorial(repo)
     }
 
-    fun getAll(): LiveData<List<Editorial>> = editDao.getAllEditorial()
+    fun getAll(): LiveData<List<Editorial>> = editDao.getAllEditorials()
 }
