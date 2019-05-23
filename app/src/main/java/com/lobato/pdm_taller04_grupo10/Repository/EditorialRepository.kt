@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 import com.lobato.pdm_taller04_grupo10.database.daos.EditorialDAO
 import com.lobato.pdm_taller04_grupo10.database.entities.Editorial
 
-class GitHubEditorialRepository (private val editDao: EditorialDAO){
+class EditorialRepository (private val editDao: EditorialDAO){
 
     @WorkerThread
     suspend fun insert(repo: Editorial){
@@ -13,4 +13,8 @@ class GitHubEditorialRepository (private val editDao: EditorialDAO){
     }
 
     fun getAll(): LiveData<List<Editorial>> = editDao.getAllEditorials()
+
+    fun getEditorialByName(): LiveData<List<Editorial>> = editDao.getEditorialByname("editorial")
+
+    fun delete() = editDao.deleteEditorial()
 }

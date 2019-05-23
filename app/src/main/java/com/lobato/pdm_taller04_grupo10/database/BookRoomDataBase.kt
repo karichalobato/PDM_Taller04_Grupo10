@@ -1,7 +1,6 @@
 package com.lobato.pdm_taller04_grupo10.database
 
 import android.content.Context
-import android.nfc.Tag
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
@@ -68,67 +67,67 @@ public abstract class BookRoomDataBase : RoomDatabase(){
 
             //TODO+++++++++++++++++++++++++++++++++++++++++++++TODO POBLANDO TABLA TAGS+++++++++++++++++++++++++++++++++++++++++++++
             var tags = Tags("Ciencia")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Ficción")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Drama")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Realismo")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Mágico")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Macondo")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Libro")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Novela")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Mestizo")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Animales")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Pais")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Niño")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Fantasticos")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Amante")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Cien")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Años")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Espiritus")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Invierno")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Harry")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Soledad")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             tags = Tags("Minutos")
-            tagsDAO.insertTgas(tags)
+            tagsDAO.insertTags(tags)
 
             //TODO+++++++++++++++++++++++++++++++++++++++++++++TODO POBLANDO TABLA AUTHOR+++++++++++++++++++++++++++++++++++++++++++++
 

@@ -11,7 +11,7 @@ import com.lobato.pdm_taller04_grupo10.database.entities.Tags
 interface TagsDAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)//HACIENDO UN INSERT Y UN UPDATE EN LA MISMA LINEA.
-    suspend fun insertTgas(tags: Tags)//Detener el proceso de entrada hasta que termine. Para poder utilizarlo en corrutinas
+    suspend fun insertTags(tags: Tags)//Detener el proceso de entrada hasta que termine. Para poder utilizarlo en corrutinas
 
     @Query("SELECT * FROM Tags WHERE name=:name")
     fun getTagsByName(name: String): LiveData<List<Tags>>

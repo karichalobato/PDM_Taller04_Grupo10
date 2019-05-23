@@ -4,10 +4,10 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import com.lobato.pdm_taller04_grupo10.Repository.GitHubAutorRepository
-import com.lobato.pdm_taller04_grupo10.Repository.GitHubEditorialRepository
-import com.lobato.pdm_taller04_grupo10.Repository.GitHubLibroRepository
-import com.lobato.pdm_taller04_grupo10.Repository.GitHubTagsRepository
+import com.lobato.pdm_taller04_grupo10.Repository.AutorRepository
+import com.lobato.pdm_taller04_grupo10.Repository.EditorialRepository
+import com.lobato.pdm_taller04_grupo10.Repository.LibroRepository
+import com.lobato.pdm_taller04_grupo10.Repository.TagsRepository
 import com.lobato.pdm_taller04_grupo10.database.BookRoomDataBase
 import com.lobato.pdm_taller04_grupo10.database.entities.Autor
 import com.lobato.pdm_taller04_grupo10.database.entities.Editorial
@@ -19,10 +19,10 @@ import kotlinx.coroutines.launch
 
 class BookViewModel(app:Application):AndroidViewModel(app){
     //TODO: Agregare una instancia para cada repositorio para mantener su referencia
-    private var autorRepository:GitHubAutorRepository?=null
-    private var editorialRepository:GitHubEditorialRepository?=null
-    private var libroRepository:GitHubLibroRepository?=null
-    private var tagRepository:GitHubTagsRepository?=null
+    private var autorRepository:AutorRepository?=null
+    private var editorialRepository:EditorialRepository?=null
+    private var libroRepository:LibroRepository?=null
+    private var tagRepository:TagsRepository?=null
     /*//TODO: Variable de tipo LiveData para almacenar el cache de la lista de libros
     var allBooks:LiveData<List<Libro>>?=null*/
     //TODO: Obteniendo referencia al dao de BookRoomDatabase
@@ -51,27 +51,24 @@ class BookViewModel(app:Application):AndroidViewModel(app){
     //TODO: GET-ALL
     fun getAllAutor():LiveData<List<Autor>> = autorRepository!!.getAll()
     fun getAllEditorial():LiveData<List<Editorial>> = editorialRepository!!.getAll()
-    fun getAll_libros():LiveData<List<Libro>> = libroRepository!!.getAll()
-    //TODO: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-    //TODO: VOY A DESCOMENTAR ESTA LINEA CUANDO REPOSITORY TAG ESTE HECHO
-    //fun getAllTag():LiveData<List<Tag>> = tagRepository!!.getAll()
-    //TODO: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    fun getAllLibros():LiveData<List<Libro>> = libroRepository!!.getAll()
+    fun getAllTags():LiveData<List<Tags>> = tagRepository!!.getAll()
 
     private fun loadAutor(){
         val daoAutor = BookRoomDataBase.getInstance(getApplication()).authorDAO()
-        autorRepository= GitHubAutorRepository(daoAutor)
+        autorRepository= AutorRepository(daoAutor)
 
     }
     private fun loadEditorial(){
         val daoEditorial=BookRoomDataBase.getInstance(getApplication()).editorialDAO()
-        editorialRepository= GitHubEditorialRepository(daoEditorial)
+        editorialRepository= EditorialRepository(daoEditorial)
     }
     private fun loadTag(){
         val daoTag = BookRoomDataBase.getInstance(getApplication()).tagsDAO()
-        tagRepository=GitHubTagsRepository(daoTag)
+        tagRepository=TagsRepository(daoTag)
     }
     private fun loadLibro(){
         val daoLibro = BookRoomDataBase.getInstance(getApplication()).bookDAO()
-        libroRepository=GitHubLibroRepository(daoLibro)
+        libroRepository=LibroRepository(daoLibro)
     }
 }
