@@ -11,6 +11,7 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
+import com.lobato.pdm_taller04_grupo10.R
 
 class NavigationBar : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 

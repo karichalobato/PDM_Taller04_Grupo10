@@ -2,9 +2,12 @@ package com.lobato.pdm_taller04_grupo10.database.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Index
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "Editorial")
+@Entity(
+    indices = [Index("idEditorial")],
+    tableName = "Editorial")
 data class Editorial (
 
     @ColumnInfo(name = "Name")

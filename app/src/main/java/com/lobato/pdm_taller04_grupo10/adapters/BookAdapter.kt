@@ -39,9 +39,9 @@ class BookAdapter internal constructor(context: Context): RecyclerView.Adapter<B
         val actual = authors[position]
         val puntero = tags[position]
         holder.CurrentBookTitle.text = current.title
-        holder.CurrentBookEdition.text.toString().toInt() = current.edition
+        holder.CurrentBookEdition.text = current.edition.toString()
         holder.Resume.text = current.description
-        holder.CurrentEditorial.text.toString().toLong() = current.editorial
+        holder.CurrentEditorial.text = current.editorial.toString()
         holder.ISBN.text = current.isbn
         holder.Authors.text = actual.name
         holder.Tags.text = puntero.name

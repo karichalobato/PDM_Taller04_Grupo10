@@ -4,7 +4,7 @@ package com.lobato.pdm_taller04_grupo10.database.entities
 import androidx.room.*
 
 
-@Entity(indices = [Index("title"), Index("author")],
+@Entity(indices = [Index("Title")],
     tableName = "Book",
     foreignKeys = [ForeignKey(entity = Editorial::class,
         parentColumns = ["idEditorial"], childColumns = ["Editorial"])])
@@ -27,7 +27,7 @@ import androidx.room.*
 )
 {
     @PrimaryKey(autoGenerate = true)
-    val idBook: Long = 0
+    var idBook: Long = 0
 }
 
 

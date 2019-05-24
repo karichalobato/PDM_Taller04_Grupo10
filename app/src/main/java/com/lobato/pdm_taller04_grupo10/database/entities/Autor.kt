@@ -13,5 +13,5 @@ import androidx.room.PrimaryKey
     val paisOrigen: String
 ){
     @PrimaryKey(autoGenerate = true)
-    val idAuthor: Long = 0
+    var idAuthor: Long = 0
 }

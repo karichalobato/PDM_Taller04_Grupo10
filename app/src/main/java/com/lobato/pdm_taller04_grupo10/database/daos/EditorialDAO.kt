@@ -1,12 +1,14 @@
 package com.lobato.pdm_taller04_grupo10.database.daos
 
 import androidx.lifecycle.LiveData
+import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.lobato.pdm_taller04_grupo10.database.entities.Editorial
 import com.lobato.pdm_taller04_grupo10.database.entities.Libro
 
+@Dao
 interface EditorialDAO {
 
     //TODO METEDO POR SI HACEMOS LO DE BUSQUEDA
