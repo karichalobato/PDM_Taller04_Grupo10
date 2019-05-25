@@ -45,7 +45,7 @@ class BookViewModel(app:Application):AndroidViewModel(app){
     fun insertTags(tags: Tags)=viewModelScope.launch(Dispatchers.IO){
         //TODO: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         //TODO: VOY A DESCOMENTAR ESTA LINEA CUANDO REPOSITORY TAG ESTE HECHO
-        //tagRepository!!.insert(tags)
+        tagRepository!!.insert(tags)
         //TODO: ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     }
     //TODO: GET-ALL
