@@ -57,10 +57,8 @@
                 android:paddingLeft="10dp"
                 android:layout_weight="2"/>
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
+    <TextView
             android:id="@+id/tags"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"></androidx.recyclerview.widget.RecyclerView>
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
 
 </LinearLayout>
